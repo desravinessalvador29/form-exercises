@@ -1,3 +1,59 @@
 {
-  "compiler": "vanillajs"
+    "port": 3000,
+    "address": "localhost",
+    "language": "vanillajs",
+    "compiler": "vanillajs",
+    "tester": "jest",
+    "editor": "gitpod",
+    "outputPath": "./.breathecode/dist",
+    "publicPath": "/preview",
+    "ignoreRegex": null,
+    "grading": "isolated",
+    "actions": [
+        "build",
+        "test"
+    ],
+    "exercisesPath": "./exercises",
+    "exercises": [
+        {
+            "slug": "01-welcome",
+            "title": "01-welcome",
+            "path": "exercises/01-welcome"
+        },
+        {
+            "slug": "02-Type-Radio",
+            "title": "02-Type-Radio",
+            "path": "exercises/02-Type-Radio"
+        },
+        {
+            "slug": "03-Replicate-simple-form",
+            "title": "03-Replicate-simple-form",
+            "path": "exercises/03-Replicate-simple-form"
+        },
+        {
+            "slug": "04-GET-vs-POST",
+            "title": "04-GET-vs-POST",
+            "path": "exercises/04-GET-vs-POST"
+        },
+        {
+            "slug": "05-fieldsets-labels-and-styles",
+            "title": "05-fieldsets-labels-and-styles",
+            "path": "exercises/05-fieldsets-labels-and-styles"
+        },
+        {
+            "slug": "06-html-forms",
+            "title": "06-html-forms",
+            "path": "exercises/06-html-forms"
+        },
+        {
+            "slug": "07-Style-a-form-without-id-or-class-selector",
+            "title": "07-Style-a-form-without-id-or-class-selector",
+            "path": "exercises/07-Style-a-form-without-id-or-class-selector"
+        },
+        {
+            "slug": "08-Spectacular-login-form",
+            "title": "08-Spectacular-login-form",
+            "path": "exercises/08-Spectacular-login-form"
+        }
+    ]
 }
