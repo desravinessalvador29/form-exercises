@@ -49,52 +49,34 @@ describe('basic HTML structure', function () {
     })
     it('You should create an input type=radio with value male', function () {
         //console.log("$$$", document.querySelectorAll("input"))
-        let myBody = document.querySelectorAll("form input");
-        //console.log("form", myBody[0].value)
-        //console.log("myBody", myBody[0].attributes[0].name)
+        let inputs = document.querySelectorAll("form input");
         let a = document.documentElement.innerHTML = html.toString()
         expect(a.indexOf("<input")).not.toBe(-1)
-        let tempType = ""
-        let tempValue = ""
-        for (let x = 0; x < myBody.length; x++) {
-            console.log('the first loog is working')
-             for (let i = 0; i < myBody[x].length; i++) {
-                 console.log('the second loop is working')
-                if (myBody[x].attributes[i] === "type") {
-                    tempType = myBody[x].attributes[i].value
-                    expect(tempType).toBe("radio")
-                }
-
-                if (myBody[x].attributes[i] === "value") {
-                    tempValue = myBody[x].attributes[i].value
-                    //console.log("tempValue",tempValue)
-                    expect(tempValue).toBe("male")
-                }
-
-                }
-            }
-
-
+        expect(inputs[0].type).toBe("radio");
+        expect(inputs[0].value).toBe("male");
 
     })
-      it('You should create an input type=radio with value female', function () {
-          let myBody = document.querySelector("form").children
-          //console.log("myBody", myBody[0].attributes[0].name)
-     let a = document.documentElement.innerHTML = html.toString()
-           expect(a.indexOf("<input")).not.toBe(-1)
-           let tempType = ""
-           for (let i=0; i<myBody[0].attributes.length; i++)
-           {
-               if (myBody[0].attributes[i].name === "type"){
-                   tempType = myBody[0].attributes[i].value
-                   //console.log("tempType",tempType)
-                   expect(tempType).toBe("radio")
-               }
-
-           }
-           expect(myBody[0].attributes[0].name) .toBe("type")
-           //console.log("html", a.indexOf("<input"))
+    it('You should create an input type=radio with value female', function () {
+        let inputs = document.querySelectorAll("form input");
+        let a = document.documentElement.innerHTML = html.toString()
+        expect(a.indexOf("<input")).not.toBe(-1)
+        expect(inputs[1].type).toBe("radio");
+        expect(inputs[1].value).toBe("female");
+    
     })
-
-
+    it('You should create an input type=radio with value heterosexual', function () {
+        let inputs = document.querySelectorAll("form input");
+        let a = document.documentElement.innerHTML = html.toString()
+        expect(a.indexOf("<input")).not.toBe(-1);
+        expect(inputs[2].type).toBe("radio");
+        expect(inputs[2].value).toBe("heterosexual");
+    
+    })
+    it('You should create an input type=radio with value homosexual', function () {
+        let inputs = document.querySelectorAll("form input");
+        let a = document.documentElement.innerHTML = html.toString()
+        expect(a.indexOf("<input")).not.toBe(-1)
+        expect(inputs[3].type).toBe("radio")
+        expect(inputs[3].value).toBe("homosexual")
+    })
 });
